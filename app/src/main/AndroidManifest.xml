@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".ScrollViewActivity"/>
         <activity android:name=".DialogActivity"/>
+        <activity android:name=".DateActivity"/>
+        <activity android:name=".ProvinceCityActivity"/>
     </application>
 
 </manifest>

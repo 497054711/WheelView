@@ -1,6 +1,7 @@
 package com.weidongjian.meitu.wheelviewdemo;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             list.add("item " + i);
         }
         //设置是否循环播放
-//        loopView.setNotLoop();
+        loopView.setNotLoop();
         //滚动监听
         loopView.setListener(new OnItemSelectedListener() {
             @Override
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         });
         //设置原始数据
         loopView.setItems(list);
-
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +61,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ProvinceCityActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DateActivity.class);
                 startActivity(intent);
             }
         });
